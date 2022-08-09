@@ -1,0 +1,121 @@
+:root {
+  --orange: hsl(31, 77%, 52%);
+  --cyan: hsl(184, 100%, 22%);
+  --darkCyan: hsl(179, 100%, 13%);
+  --white/* (paragraphs) */: hsla(0, 0%, 100%, 0.75);
+  --lightGray/* (background, headings, buttons) */: hsl(0, 0%, 95%);
+  --borderrad: 10px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: lexa, sans-serif;
+}
+@font-face {
+  font-family: big;
+  src: url(./font/BigShouldersDisplay-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: lexa;
+  src: url(./font/LexendDeca-VariableFont_wght.ttf);
+}
+
+h1 {
+  display: none;
+}
+
+body {
+  background-color: var(--lightGray);
+}
+.allCars {
+  display: inline;
+  position: absolute;
+  top: 700px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.cars {
+  width: 300px;
+  height: 400px;
+  padding: 30px;
+  color: var(--white);
+}
+h2 {
+  font-family: big;
+  text-transform: uppercase;
+  margin: 30px 0 30px;
+}
+.bodySedan {
+  background-color: var(--orange);
+  border-top-left-radius: var(--borderrad);
+  border-top-right-radius: var(--borderrad);
+}
+.bodySuv {
+  background-color: var(--cyan);
+}
+.bodyluxury {
+  background-color: var(--darkCyan);
+
+  border-bottom-left-radius: var(--borderrad);
+  border-bottom-right-radius: var(--borderrad);
+}
+
+.btn {
+  height: 40px;
+  width: 150px;
+  border-radius: 9999px;
+  border: 0;
+  margin-top: 30px;
+}
+.btnSedan {
+  color: var(--orange);
+}
+.btnSuv {
+  color: var(--cyan);
+}
+.btnLuxury {
+  color: var(--darkCyan);
+}
+p {
+  line-height: 25px;
+  font-size: 15px;
+}
+
+@media (min-width: 775px) {
+  .allCars {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .cars {
+    width: 250px;
+    height: 500px;
+    padding: 30px;
+    color: var(--white);
+  }
+
+  .btn {
+    height: 40px;
+    width: 150px;
+    border-radius: 9999px;
+    border: 0;
+  }
+  p {
+    height: 200px;
+  }
+  .bodySedan {
+    border-radius: 0;
+    border-top-left-radius: var(--borderrad);
+    border-bottom-left-radius: var(--borderrad);
+  }
+
+  .bodyluxury {
+    border-radius: 0;
+    border-top-right-radius: var(--borderrad);
+    border-bottom-right-radius: var(--borderrad);
+  }
+}
