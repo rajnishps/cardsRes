@@ -82,7 +82,7 @@ p {
   font-size: 15px;
 }
 
-@media (min-width: 775px) {
+@media (min-width: 375px) {
   .allCars {
     display: flex;
     position: absolute;
